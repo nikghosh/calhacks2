@@ -1,7 +1,6 @@
 import urllib.request
 import json
 
-
 """
 Converts a series of addresses into latitude longitude coordinates
 Uses the HERE Geocoder API
@@ -15,7 +14,6 @@ lat lng
 
 Kazu Kogachi, Cal Hacks 2.0
 """
-
 
 appId = '5wWMgIqkEQkCbqjJes4x'
 appCode = '27suaUwub3nbfaBTDbEDEw'
@@ -33,12 +31,12 @@ except Exception as e:
     f.close()
 else:
     line = f.readline()
-    writer = open('ohio_loc.txt','w')
+    writer = open('loc/customer_loc.txt','w') #dont forget to change the txt
     while line != '':
         d = 'dict({})'.format(line)
         d = eval(d)
         
-        if d['state'] == 'Ohio': #condition
+        if d['state'] != '': #condition - set equal to a state
             req_url = url + "&gen=9&housenumber={}&street={}&city={}".format(d['street_number'],
                                                                              d['street_name'],
                                                                              d['city'])
@@ -64,11 +62,11 @@ else:
                 temp = d_raw['Response']['View'][0]['Result'][0]['Location']['DisplayPosition']
                 to_write = str(temp['Latitude']) + ' ' + str(temp['Longitude']) + '\n'
             except Exception as e:
-                #print('lol why is something null\n' + str(e))
+                print('Caught Exception' + str(e))
                 
             #print("WRITING " + repr(to_write))
             writer.write(to_write)
-                
+            
         line = f.readline()
         #print('NEXT LINE READ: ' + str(line))
         

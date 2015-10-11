@@ -4,6 +4,15 @@ import json
 """
 Gets the address from CapitalOne Hackathon API accounts
 
+Outputs a file addresses.txt:
+
+json obj
+json obj
+...
+
+
+I read json objs as dictionaries in python
+
 Kazu Kogachi, Cal Hacks 2.0
 """
 
@@ -34,6 +43,5 @@ for obj in lst:
         f.write(str(data['address'])+'\n')
 
 f.close()
-
 
 print("done")
