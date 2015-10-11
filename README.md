@@ -8,7 +8,7 @@ We made the each cell in the voronoid represent a vendor (Symbolized as a '$', a
 
 <div style="text-align:center">
 <img src='https://raw.githubusercontent.com/pikazu/calhacks2/master/voronoid.PNG'/>
-<small>Currently we use a black background, but we hope to overlay it on a cartesian map later</small>
+<small>Currently we use a black background, but we hope to overlay it on a cartesian map to show that these points were drawn from real life locations</small>
 </div>
 
 <h4>Current Uses</h4>
