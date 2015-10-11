@@ -17,6 +17,6 @@ Our program, generalized, will be able to give a company visual data on how thei
 <h4>Future Additions</h4>
 With some more time, we hope to apply our hack to other uses, such as visualizing coffee shops and coffee drinkers to make supply shipments more efficent (since our data visualization would show which shops are most visited). Furthermore, we could consider more factors instead of distance in calculating other attributes of a ceterain shop. For example, we could consider highering more employees at a location with a lot of traffic compared to other locations.
 
-<h4>Challenge</h4>
+<h4>Challenges</h4>
 The most challenging part of the hack was creating the voronoid diagram to visualize how clustered each cell in the diagram was. Another challenge was parseing through large amounts of API data and sorting it into data that we are able to process. As relatively new 'hackers', these challenges took most of our time, and forced us to stick with a working, less complicated, version of our 'hack'.
 
