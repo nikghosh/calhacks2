@@ -19,7 +19,7 @@ from math import sqrt
 pplList = [] #list A, [var x, var y]
 mercList = [] #list B, [var x, var y]
 
-reader = open('loc/va_loc.txt','r')
+reader = open('loc/ny_loc.txt','r')
 line = reader.readline()
 while line != '':
     temp = str(line).split()
@@ -27,7 +27,7 @@ while line != '':
     line = reader.readline()
 reader.close()
 
-reader = open('loc/va_merc_loc.txt','r')
+reader = open('loc/ny_merc_loc.txt','r')
 line = reader.readline()
 while line != '':
     temp = str(line).split()
@@ -69,7 +69,7 @@ transB = [[ p[0]*statsA['sd_x']+statsA['x_avg'] , p[1]*statsA['sd_y']+statsA['y_
 ###print(str(sum_stats(zBList)))
 ###print(str(sum_stats(transB)))
 
-writer = open('loc/mod_va_merc_loc.txt','w')
+writer = open('loc/mod_ny_merc_loc.txt','w')
 for p in transB:
     writer.write(str(p[0]) + ' ' + str(p[1]) + '\n')
 writer.close()

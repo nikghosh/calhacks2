@@ -31,12 +31,12 @@ except Exception as e:
     f.close()
 else:
     line = f.readline()
-    writer = open('loc/customer_loc.txt','w') #dont forget to change the txt
+    writer = open('loc/ny_loc.txt','w') #dont forget to change the name
     while line != '':
         d = 'dict({})'.format(line)
         d = eval(d)
         
-        if d['state'] != '': #condition - set equal to a state
+        if d['state'] == 'New York': #condition - set equal to a state
             req_url = url + "&gen=9&housenumber={}&street={}&city={}".format(d['street_number'],
                                                                              d['street_name'],
                                                                              d['city'])

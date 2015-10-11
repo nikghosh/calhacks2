@@ -26,7 +26,7 @@ lst = json.loads(raw.decode('utf-8'))['results']
 
 memo = [] #removes duplicat addresses, though there might not be any
 
-f = open('loc/va_merc_loc.txt','w') #change if condition changes
+f = open('loc/ny_merc_loc.txt','w') #change if condition changes
 
 for obj in lst:
     geo_to_write = ''
@@ -39,7 +39,8 @@ for obj in lst:
         print('Error: ' + str(obj))
     
     try:
-        if obj['address']['state'] == 'VA': #condition by state
+        print(str(obj))
+        if obj['address']['state'] == 'NY': #condition by state
             f.write(geo_to_write)
     except Exception as e:
         #for the state filter
