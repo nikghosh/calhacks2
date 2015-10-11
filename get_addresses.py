@@ -3,6 +3,7 @@ import json
 
 """
 Gets the address from CapitalOne Hackathon API accounts
+
 Kazu Kogachi, Cal Hacks 2.0
 """
 

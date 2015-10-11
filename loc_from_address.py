@@ -5,6 +5,14 @@ import json
 """
 Converts a series of addresses into latitude longitude coordinates
 Uses the HERE Geocoder API
+
+Outputs a file locations.txt in format:
+
+lat lng
+lat lng
+...
+
+
 Kazu Kogachi, Cal Hacks 2.0
 """
 
@@ -54,15 +62,15 @@ else:
             to_write = ''
             try:
                 temp = d_raw['Response']['View'][0]['Result'][0]['Location']['DisplayPosition']
-                to_write = str(temp['Longitude']) + ' ' + str(temp['Latitude']) + '\n'
+                to_write = str(temp['Latitude']) + ' ' + str(temp['Longitude']) + '\n'
             except Exception as e:
-                print('lol why is something null\n' + str(e))
+                #print('lol why is something null\n' + str(e))
                 
-            print("WRITING " + repr(to_write))
+            #print("WRITING " + repr(to_write))
             writer.write(to_write)
                 
         line = f.readline()
-        print('NEXT LINE READ: ' + str(line))
+        #print('NEXT LINE READ: ' + str(line))
         
     writer.close()
     f.close()
