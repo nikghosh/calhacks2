@@ -20,3 +20,5 @@ With some more time, we hope to apply our hack to other uses, such as visualizin
 <h4>Challenges</h4>
 The most challenging part of the hack was creating the voronoi diagram to visualize how clustered each cell in the diagram was. Another challenge was parseing through large amounts of API data and sorting it into data that we are able to process. As relatively new 'hackers', these challenges took most of our time, and forced us to stick with a working, less complicated, version of our 'hack'.
 
+<h4>Contributions</h4>
+I studied and gathered all of the API data, and processed it into a format for my partner Nikhil Ghosh to read. I used python to gather and parse the data, while Nikhil used Java to draw the Voronoi diagram.
